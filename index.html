@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>My Family Book</title>
+    </head>
+
+    <body>
+        <center>
+            <h1>
+                My Family Book
+            </h1>
+
+            <img id = "images" src="The Family Book.png" width="500" height="500">
+        <h2 id="text">
+            My Family Consists of 3 members
+        </h2>
+
+        <button id="btn_1" onclick="next_slide()">
+         Next
+        </button>
+        </center>
+
+        <script>
+          var names = [
+              "1) Rehaan Kumar (Me)",
+              "2) Malani Kumar (Mother)",
+              "3) Sandeep Kumar (Father)",
+              "My Family consists of 3 members"
+          ];
+           var pics = [
+             "Rehaan.JPG",
+             "Malani.JPG",
+             "Sandeep.JPG",
+             "The Family Book.png"
+           ]
+
+           var i = 0;
+           function next_slide() {
+               document.getElementById("images").src= pics[i];
+               document.getElementById("text").innerHTML=names[i];
+               i++;
+               if (i==4) {
+                   i=0;
+               }
+
+            }
+        </script>
+    </body>
+</html>
